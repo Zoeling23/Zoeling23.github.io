@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>ProfileCard_Zoeling</title>
+    <script src="https://kit.fontawesome.com/735cab2682.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: 微軟正黑體, MS UI Gothic;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.5);
+            max-width: 800px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .round {
+            border: 1px solid #29583e;
+            border-radius: 50%;
+            padding: 50px;
+            opacity: 0.3;
+        }
+
+        .round:hover {
+            opacity: 1;
+        }
+
+        button {
+            border: none;
+            background: none;
+            font-size: 24px;
+            color: #8bc34a;
+        }
+
+        button:hover {
+            color: #4CAF50;
+            transform: rotate(22deg)
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img class="round" src="https://i.imgur.com/PTGUcXq.png" alt="user" width="200px" height="200px"/>
+        
+        <h3 style="padding-left:10px ;color: #29583e;">晏伶ZoeLing</h3>
+        <h4 style="padding-left:10px ;color: #f05226;">新鮮的肝<br>
+        <span style="color: #666666;">初入工程師世界</span>
+        </h4>
+
+        <hr>
+        <p style="letter-spacing: 2px;padding-left:20px;color: #666666;">
+            PS <b style="color:#8bc34a ;">★★★★☆</b><br>
+            AI <b style="color:#8bc34a ;">★★★★☆</b><br>
+            C# <b style="color:#8bc34a ;">★★★☆☆</b><br>
+            MS SQL <b style="color:#8bc34a ;">★★★☆☆</b><br>
+            HTML <b style="color:#8bc34a ;">★☆☆☆☆</b><br>
+            CSS <b style="color:#8bc34a ;">★☆☆☆☆</b><br>
+        </p>
+        <div class="actions">
+            <button><i class="far fa-heart"></i></button>
+            <button><i class="far fa-envelope"></i></button>
+            <button><i class="fas fa-user-friends"></i></button>
+        </div>
+    </div>
+
+</body>
+
+</html>
