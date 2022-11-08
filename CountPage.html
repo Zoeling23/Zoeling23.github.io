@@ -3,9 +3,24 @@
 
 <head>
     <title>函式計算</title>
+    <style>
+        h3 {
+            color: darkblue;
+        }
+    </style>
     <script>
-        function showhello() {
-            alert("Hello~Hello~");
+        function maxnum() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a > b) {
+                alert(a + '比較大');
+            }
+            else if (a < b) {
+                alert(b + '比較大');
+            }
+            else {
+                alert('一樣大');
+            }
         }
     </script>
 
@@ -13,27 +28,69 @@
 </head>
 
 <body>
+    <h3>奇偶數判別odd-or-even-number</h3>
     <script>
-        var a = prompt("請輸入數字", "0");
+        var a = prompt("請輸入數字判別奇、偶數", "0");
         if (a < 0) {
-            document.write("您輸入的值是*負數*");
+            document.write("您輸入的" + a + "是*負數*");
         }
-        else if(a % 2 != 0) {
-            document.write("您輸入的值是奇數");
+        else if (a % 2 != 0) {
+            document.write("您輸入的" + a + "是奇數");
         }
-        else{
-            document.write("您輸入的值是偶數");
+        else {
+            document.write("您輸入的" + a + "是偶數");
         }
     </script>
 
+    <h3>比大小max-of-two-numbers</h3>
     <br>
-    <button onclick="showhello()">點我</button>
+    <input type="number" name="num1" id="a" value="0">
+    <br>
+    <input type="number" name="num2" id="b" value="0">
+    <br>
+    <button onclick="maxnum()">比較</button>
+
+
+    <h3>九九乘法表</h3>
+    <input type="number" id="userinput">
+    <input type="button" id="queR" value="產生">
+    <table border="1"></table>
+
+    <script>
+        function off(num = 9) {//創建一個函數
+            for (let i = 1; i <= num; i++) {
+                let tr = document.createElement("tr");//創建tr;
+                for (let j = 1; j <= 9; j++) {
+                    let td = document.createElement("td")//創建td
+                    td.innerHTML += `${i}*${j}=${i * j}  `;//把i*j=ij的過程賦值給td裡面
+                    tr.appendChild(td);//把td添加到tr裡面
+                }
+                document.querySelector("table").appendChild(tr);//找到table把tr添加到table裡面
+            }
+        }
+        queR.onclick = function () {//點擊quer的時候里都為空值，在重新賦值；
+            document.querySelector("table").innerHTML = "";
+            off(userinput.value - 0);
+        }
+    </script>
+
+    <h3>三角形</h3>
+    <input type="number" id="c">
+    <br>
+    <script>
+        function trian() {
+            var c = document.getElementById("c").value;
+            for (let j = 1; j <= c; j++) {
+                for (let i = 1; i <= j; i++) {
+                    document.write("*");
+                }
+                document.write("<br/>");
+            }
+        }
+    </script>
+    <button onclick="trian()">產生</button>
 
 
 </body>
-
-<footer>
-    @好好用公司2022.CopyRight
-</footer>
 
 </html>
