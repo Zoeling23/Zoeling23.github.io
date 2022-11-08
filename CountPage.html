@@ -90,6 +90,22 @@
     </script>
     <button onclick="trian()">產生</button>
 
+    <h3>倒三角形</h3>
+    <input type="number" id="d">
+    <br>
+    <script>
+        function Rtrian() {
+            var d = document.getElementById("d").value;
+            for (let j = 0; j <= d; j++) {
+                for (let i = d-i; i > 1; i--) {
+                    document.write("*");
+                }
+                document.write("<br/>");
+            }
+        }
+    </script>
+    <button onclick="Rtrian()">產生</button>
+
 
 </body>
 
