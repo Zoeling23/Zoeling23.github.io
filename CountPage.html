@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>函式計算</title>
+    <script>
+        function showhello() {
+            alert("Hello~Hello~");
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <script>
+        var a = prompt("請輸入數字", "0");
+        if (a < 0) {
+            document.write("您輸入的值是*負數*");
+        }
+        else if(a % 2 != 0) {
+            document.write("您輸入的值是奇數");
+        }
+        else{
+            document.write("您輸入的值是偶數");
+        }
+    </script>
+
+    <br>
+    <button onclick="showhello()">點我</button>
+
+
+</body>
+
+<footer>
+    @好好用公司2022.CopyRight
+</footer>
+
+</html>
